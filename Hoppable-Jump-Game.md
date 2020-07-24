@@ -5,6 +5,7 @@
 ### Given an integer list nums where each number represents the maximum number of hops you can make, determine whether you can reach to the last index starting at index 0.
 
 
+### APPROACH-1
 
 ```javascript
 var canJump = function(nums){ 
@@ -24,4 +25,19 @@ var canJump = function(nums){
 }
 
 // canJump([2,3,0,1,0,1])
+```
+### APPROACH-2
+
+```javascript
+var canJump = function(nums) {
+    let maxReachable = 0
+    for (let i = 0; i < nums.length; i++){
+        if (i > maxReachable) return false
+        else {
+            maxReachable = Math.max(maxReachable, i + nums[i])
+        }
+    }
+    return true
+};
+
 ```
