@@ -1,12 +1,12 @@
-Leetcode Problem #55: Jump Game
+# Leetcode Problem #55: Jump Game
 
-Problem statement:
+## Problem statement:
 
-Given an integer list nums where each number represents the maximum number of hops you can make, 
-determine whether you can reach to the last index starting at index 0.
-
+### Given an integer list nums where each number represents the maximum number of hops you can make, determine whether you can reach to the last index starting at index 0.
 
 
+
+```javascript
 var canJump = function(nums){ 
   //index of the last item in the array
   let lastPosition = nums.length - 1
@@ -24,4 +24,4 @@ var canJump = function(nums){
 }
 
 // canJump([2,3,0,1,0,1])
-
+```
