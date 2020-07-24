@@ -1,3 +1,9 @@
+Problem statement:
+
+Given an integer list nums where each number represents the maximum number of hops you can make, determine whether you can reach to the last index starting at index 0.
+
+
+
 var canJump = function(nums){ 
   //index of the last item in the array
   let lastPosition = nums.length - 1
