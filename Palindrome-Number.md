@@ -50,7 +50,9 @@ var isPalindrome = function(x) {
      if(x<10) return true;
      let reversed=0, num=x;
      while(num>0){
+         //num%10 pulls out the digit from end && reversed*10 will keep adding the digits to form the number again
          reversed=reversed*10 + num%10;
+         //here the number gets decremented (121 becomes 12 for next iteration)
          num=Math.floor(num/10);
      }
  return reversed===x;
