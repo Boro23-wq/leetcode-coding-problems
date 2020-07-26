@@ -46,7 +46,7 @@ function dfs(i, j, grid){
      if (i < 0 || j < 0 || i >= grid.length  || j >= grid[i].length || grid[i][j] === '0')  {
         return
     }
-    
+    //grid[i][j] = '0' so we don't visit the same grid again
     grid[i][j]='0'
    
 	dfs(i, j+1, grid)   
