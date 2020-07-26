@@ -18,7 +18,7 @@ Output: [24,12,8,6]
 > Could you solve it with constant space complexity? (The output array does not count as extra space for the purpose of space complexity analysis.)
 ---
 
-**EFFICIENT SOLUTION :**
+**EFFICIENT SOLUTION :** Time: O(n) and Space: O(1), since it is given the output array doesn't count as extra space.
 
 ```javascript
 /**
