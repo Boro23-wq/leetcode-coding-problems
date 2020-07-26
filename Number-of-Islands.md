@@ -26,7 +26,7 @@ Output: 3
 
 ---
 
-**DFS SOLUTION:**
+**APPROACH 1: DFS SOLUTION (LEETCODE ACCEPTED)**
 ```javascript
 const numIslands =  (grid) => {
 	let count = 0
@@ -54,5 +54,52 @@ function dfs(i, j, grid){
 	dfs(i+1, j, grid) 
 	dfs(i-1, j, grid)   
 
+}
+```
+
+**APPROACH 2: BFS SOLUTION (DOESN'T PASS ALL LEETCODE TEST CASES)**
+
+```
+const numIslands =  (grid) => {
+    let rows = grid.length
+    let cols = grid[0].length
+    let visited = Array.from(new Array(grid.length), () => (new Array(grid[0].length)).fill(0))
+    let islands = 0
+    
+    var bfs = (r, c) => {
+        
+        if (grid[r][c] === 0) return
+        if (visited[r][c]) return
+        
+        visited[r][c] = 1
+        
+         if (r + 1 < grid.length) {
+            bfs(r + 1, c)
+        }
+        
+         if (r - 1 >= 0) {
+            bfs(r - 1, c)
+        }
+        
+         if (c + 1 < grid[r].length) {
+            bfs(r, c + 1)
+        }
+        
+        if (c - 1 >= 0) {
+            bfs(r, c - 1)
+        }
+    }
+    
+    for (let i = 0; i < rows; i++){
+        for (let j = 0; j < cols; j++){
+            if (visited[i][j] === 1 || grid[i][j] === 0)
+                continue
+            
+            bfs(i, j)
+            islands += 1
+        }
+    }
+    
+    return islands
 }
 ```
