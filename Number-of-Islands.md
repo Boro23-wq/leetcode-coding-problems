@@ -58,6 +58,7 @@ function dfs(i, j, grid){
 ```
 
 **APPROACH 2: BFS SOLUTION (DOESN'T PASS ALL LEETCODE TEST CASES)**
+_But works with [binarysearch.io](https://binarysearch.io/) test cases!_
 
 ```javascript
 const numIslands =  (grid) => {
@@ -103,3 +104,5 @@ const numIslands =  (grid) => {
     return islands
 }
 ```
+
+_[Binary Search](https://binarysearch.io/) is another coding platform for coding enthusiasts where people can form rooms with friends and work on a coding problem. It is fun and interactive._
