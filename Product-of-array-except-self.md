@@ -51,11 +51,6 @@ var productExceptSelf = function(nums){
             hash[nums.length-1-i] *= temp
             temp *= nums[nums.length-1-i]
         }
-        //copy hash values to nums array
-        for (let i=0; i < nums.length; i++){
-            nums[i] = hash[i]
-        }
-        
-        return nums
+        return hash
    }
 ```
