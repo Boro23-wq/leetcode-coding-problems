@@ -37,8 +37,7 @@ var productExceptSelf = function(nums){
         //hash[2] = 2 (two indices on left of nums[2] hence cumulative product will be nums[0] * nums[1] = 2)
         //hash[3] = 6 (three indices on left of nums[3] hence cumulative product will be nums[0] * nums[1] * nums[2] = 6)
         //hash[4] = 24 (four indices on left of nums[4] hence cumulative product will be i.e. nums[0] * nums[1] * nums[2] * nums[3] = 24)
-        for (let i=1; i < nums.length; i++){
-            hash[0] = 1
+        for (let i=0; i < nums.length; i++){
             hash[i] = temp
             temp *= nums[i]
         }
