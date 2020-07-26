@@ -59,7 +59,7 @@ function dfs(i, j, grid){
 
 **APPROACH 2: BFS SOLUTION (DOESN'T PASS ALL LEETCODE TEST CASES)**
 
-```
+```javascript
 const numIslands =  (grid) => {
     let rows = grid.length
     let cols = grid[0].length
