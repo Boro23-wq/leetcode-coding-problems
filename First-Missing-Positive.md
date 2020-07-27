@@ -61,6 +61,7 @@ var firstMissingPositive = function(nums){
          
          //check if the number is in its target position
          //if it is continue or if it is not than swap or rearrange the numbers
+         //and bring into its original position
          if (index !== targetIndex && nums[targetIndex] !== currentNumber){
              let temp = currentNumber
              nums[index] = nums[targetIndex]
@@ -72,11 +73,20 @@ var firstMissingPositive = function(nums){
      
      index = 0
      while (index < numsLength){
+         // nums --> [1,2,0]
+         //check if the number matches its index
+         //nums[0] === 1 (this means the number is present)
+         //nums[1] === 2 (number present again)
+         //nums[2] === 0 (since the number should have been 3 and not 0, hence we return the number 3 itself)
          if(nums[index] !== index + 1){
              return index + 1
          }
          index++
      }
+     //if none of the conditions above are met
+     //that means the array has to look something like this where nums -> [1,2,3]
+     //this means all the number is in its own position
+     //therefore just return the number next to 3 which is 4
      return numsLength + 1  
  }
 ```
