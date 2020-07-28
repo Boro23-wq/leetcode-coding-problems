@@ -46,6 +46,10 @@ _This approach is inefficient because it uses a Set that has a linear space comp
 
 **APPROACH-2 (Efficient Solution - O(n) Time and O(1) Space):**
 
+_This approach is efficient because it doesn't uses an extra space in the form of a Set that we used in the earlier approach._
+
+***The idea behind this approach is that we compare if the position of the items are correct. Since in an array of non-negative integers 1 will always be at index 0 and so on... The very first index that doesn't match its item is the required number.***
+
 ```javascript
 var firstMissingPositive = function(nums){
      let numsLength = nums.length
@@ -53,16 +57,17 @@ var firstMissingPositive = function(nums){
      
      while (index < numsLength){
          
+         //STEP 1: check for edge cases
          const currentNumber = nums[index]
          const targetIndex = nums[index] - 1
          
-         //check for edge cases
-         //check if the number is greater than the length or if the number is a non negative number or if the number is zero
+         //we don't care about the negative numbers and the numbers that are greater than the length of the array itself
          if(currentNumber > numsLength || currentNumber <= 0){
              index++
              continue
          }
          
+         //STEP: 2
          //check if the number is in its target position
          //if it is continue or if it is not than swap or rearrange the numbers
          //and bring into its original position
