@@ -30,12 +30,16 @@ Output: 1
 
 **APPROACH-1 (Inefficient Solution - O(n) Time and O(n) Space):**
 
+_This approach is inefficient because it uses a Set that has a linear space complexity (because in the worst case we may have to store all the items in the Set_).
+
 ```javascript
  var firstMissingPositive = function(nums){
+      //copy all the items in nums to the Set
       let set = new Set(nums)
       let i = 0
+      //loop through the set and check existence of a number
       while(++i){
-          if(!set.has(i)) return i
+          if(!set.has(1)) return i
       }
  }
 ```
