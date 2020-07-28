@@ -99,3 +99,50 @@ var firstMissingPositive = function(nums){
      return numsLength + 1  
  }
 ```
+
+**APPROACH-3 (Efficient Solution - O(n) Time and O(1) Space):**
+
+***The idea behind this approach:
+Step 1: Convert the non-positive numbers or numbers greater than 'n' to 1.
+Step 2: Check for positive numbers and turn them into negative by adding a '-'.
+Step 3: Run a loop through the array again and the first positive number will be the number missing on the list. Returning its index + 1 will give us the missing number.
+Step 4: If none of the above steps holds true that means all the numbers are already there in the array and the next positive missing number would be the next to the last item in the array.
+***
+
+```javascript
+var firstMissingPositive = function(nums) {
+    if (nums === null || nums.length === 0) return 1
+    
+    let n = nums.length, containsOne = false
+        
+    //STEP 1
+    for (let i = 0; i < n; i++){
+        if(nums[i] === 1){
+            containsOne = true
+        }
+        else if(nums[i] <= 0 || nums[i] > n){
+            nums[i] = 1
+        }
+    }
+    
+    if (containsOne === false) return 1
+    
+    //STEP 2:
+    for (let i = 0; i < n; i++){
+        let index = Math.abs(nums[i]) - 1
+        //check for positive numbers and flip their sign
+        if (nums[index] > 0){
+            nums[index] = -nums[index]
+        }
+    }
+    
+    //STEP 3:
+    for (let i = 0; i < n; i++){
+        if (nums[i] > 0){
+            return i + 1
+        }
+    }
+    
+    return n + 1
+};
+```
