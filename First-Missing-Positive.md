@@ -102,12 +102,12 @@ var firstMissingPositive = function(nums){
 
 **APPROACH-3 (Efficient Solution - O(n) Time and O(1) Space):**
 
-***The idea behind this approach:
-Step 1: Convert the non-positive numbers or numbers greater than 'n' to 1.
-Step 2: Check for positive numbers and turn them into negative by adding a '-'.
-Step 3: Run a loop through the array again and the first positive number will be the number missing on the list. Returning its index + 1 will give us the missing number.
-Step 4: If none of the above steps holds true that means all the numbers are already there in the array and the next positive missing number would be the next to the last item in the array.
-***
+***The idea behind this approach:***<br>
+Step 1: Convert the non-positive numbers or numbers greater than 'n' to 1.<br>
+Step 2: Check for positive numbers and turn them into negative by adding a '-'.<br>
+Step 3: Run a loop through the array again and the first positive number will be the number missing on the list. Returning its index + 1 will give us the missing number.<br>
+Step 4: If none of the above steps holds true that means all the numbers are already there in the array and the next positive missing number would be the next to the last item in the array.<br>
+
 
 ```javascript
 var firstMissingPositive = function(nums) {
