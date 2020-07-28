@@ -28,7 +28,7 @@ Output: 1
 > **Note:** Your algorithm should run in O(n) time and uses constant extra space.
 ---
 
-**APPROACH-1 (Inefficient Solution - O(n) Time and O(n) Space):**
+### **APPROACH-1 (Inefficient Solution - O(n) Time and O(n) Space):**
 
 _This approach is inefficient because it uses a Set that has a linear space complexity (because in the worst case we may have to store all the items in the Set_).
 
@@ -43,8 +43,9 @@ _This approach is inefficient because it uses a Set that has a linear space comp
       }
  }
 ```
+---
 
-**APPROACH-2 (Efficient Solution - O(n) Time and O(1) Space):**
+### **APPROACH-2 (Efficient Solution - O(n) Time and O(1) Space):**
 
 _This approach is efficient because it doesn't uses an extra space in the form of a Set that we used in the earlier approach._
 
@@ -99,10 +100,12 @@ var firstMissingPositive = function(nums){
      return numsLength + 1  
  }
 ```
+---
 
-**APPROACH-3 (Efficient Solution - O(n) Time and O(1) Space):**
+### **APPROACH-3 (Efficient Solution - O(n) Time and O(1) Space):**
 
 ***The idea behind this approach:***<br>
+
 ***Step 1:*** Convert the non-positive numbers or numbers greater than 'n' to 1.<br>
 ***Step 2:*** Check for positive numbers and turn them into negative by adding a '-'.<br>
 ***Step 3:*** Run a loop through the array again and the first positive number will be the number missing on the list. Returning its index + 1 will give us the missing number.<br>
