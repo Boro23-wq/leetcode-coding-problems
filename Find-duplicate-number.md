@@ -26,16 +26,49 @@ Output: 3
 - There is only one duplicate number in the array, but it could be repeated more than once.
 ---
 
-### APPROACH-1 (Inefficient Solution) - Manipulates the array although Time Complexity is nlogn
+### APPROACH-1 (Inefficient Solution) - Takes extra space
+
+_Time-O(n) | Space-O(n)_
 
 ```javascript
-let findDuplicate = A => A.sort((a, b) => a - b)
-                          .filter((_, i) => 0 < i && A[i - 1] == A[i])[0];
+var findDuplicate = function(nums) {
+    let set = new Set()
+    
+    for (let i=0; i < nums.length; i++){
+        if (!set.has(nums[i])) {
+            set.add(nums[i])
+        }
+        else {
+            return nums[i]
+        }
+    }
+};
 ```
 
 ---
-### APPROACH-2 (Optimised Solution) - Floyd's Cycle Detection Algorithm / Tortoise and Hare 
-_Time-O(n), Space-O(1)_
+
+### APPROACH-2 (Inefficient Solution) - Manipulates the array
+
+_Time-O(n) | Space-O(1)_
+
+```javascript
+var findDuplicate = function(nums) {
+    
+    for (let i = 0; i < nums.length; i++){      
+        if(nums[Math.abs(nums[i])] > 0){
+            nums[Math.abs(nums[i])] = -nums[Math.abs(nums[i])]
+        } else
+            return Math.abs(nums[i])
+    }
+    
+    return 0
+
+};
+```
+
+### APPROACH-3 (Optimised Solution) - Floyd's Cycle Detection Algorithm / Tortoise and Hare 
+
+_Time-O(n) | Space-O(1)_
 
 ```javascript
 /**
