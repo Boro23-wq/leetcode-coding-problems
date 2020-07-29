@@ -26,7 +26,16 @@ Output: 3
 - There is only one duplicate number in the array, but it could be repeated more than once.
 ---
 
-### APPROACH-2 (Optimised Solution) - Floyd's Cycle Detection Algorithm / Tortoise and Hare
+### APPROACH-1 (Inefficient Solution) - Manipulates the array although Time Complexity is nlogn
+
+```javascript
+let findDuplicate = A => A.sort((a, b) => a - b)
+                          .filter((_, i) => 0 < i && A[i - 1] == A[i])[0];
+```
+
+---
+### APPROACH-2 (Optimised Solution) - Floyd's Cycle Detection Algorithm / Tortoise and Hare 
+_Time-O(n), Space-O(1)_
 
 ```javascript
 /**
