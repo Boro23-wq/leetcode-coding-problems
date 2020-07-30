@@ -32,6 +32,8 @@ cache.get(4);       // returns 4
 ```
 ---
 
+### Solution - Implemented using Map(); O(1) time for lookups and adding to the map.
+
 ```javascript
 /**
  * @param {number} capacity
