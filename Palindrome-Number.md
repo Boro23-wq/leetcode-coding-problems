@@ -34,6 +34,8 @@ _Follow up:_
 
 ## **APPROACH 1:** (Converting to string)
 
+**Time:** O(n) | **Space:** O(n)
+
 ```javascript
 var isPalindrome = function(x) {
     let string = x.toString()
@@ -44,7 +46,8 @@ var isPalindrome = function(x) {
 ```
 
 ## **APPROACH 2:** (Without string conversion)
-_(Takes up less space)_
+
+**Time:** O(n) | **Space:** O(1)
 
 ```javascript
 var isPalindrome = function(x) {
