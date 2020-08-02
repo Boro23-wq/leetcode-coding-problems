@@ -25,3 +25,49 @@ nums2 = [2,5,6],       n = 3
 - -10^9 <= nums1[i], nums2[i] <= 10^9
 - nums1.length == m + n
 - nums2.length == n
+
+---
+### APPROACH-1 (Sorting the Array)
+Time - O(nlogn) | Space O(1)
+
+```javascript
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+
+let merge = function(arr1, m, arr2, n){
+  for (let i = m; i < m+n; i++){
+    arr1[i] = arr2[i - m]
+  }
+  return arr1.sort((a, b) => a - b)
+}
+```
+
+---
+### APPROACH-2 (Insertion Sort, In-place)
+Time - O(n) | Space O(1)
+
+```javascript
+let merge = function(arr1, m, arr2, n) {
+  let left = m - 1;
+  let right = n - 1;
+
+  for (let i = m + n - 1; i >= 0; i--) {
+    if (right < 0) {
+      break;
+    }
+      
+    if (left >= 0 && arr1[left] > arr2[right]) {
+      arr1[i] = arr1[left];
+      left--;
+    } else {
+      arr1[i] = arr2[right];
+      right--;
+    }
+  }
+};
+```
