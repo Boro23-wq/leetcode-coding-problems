@@ -39,3 +39,30 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 ```
 ---
 
+## Approach-2
+
+#### QUADRATIC TIME - O(n^2)
+
+```java
+class Solution {
+  public int maxContiguousSubarraySum(int[] nums) {
+    int n = nums.length;
+    int maximumSubArraySum = Integer.MIN_VALUE;
+
+    for (int left = 0; left < n; left++) {
+      int runningWindowSum = 0;
+
+      for (int right = left; right < n; right++) {
+        runningWindowSum += nums[right];
+
+        maximumSubArraySum = Math.max(maximumSubArraySum, runningWindowSum);
+      }
+    }
+
+    return maximumSubArraySum;
+  }
+}
+```
+---
+
+
