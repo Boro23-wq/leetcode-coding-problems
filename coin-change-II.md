@@ -43,7 +43,7 @@ the answer is guaranteed to fit into signed 32-bit integer
 ---
 
 ## Solution 1: 
-#### Time - O(C * A)  | Space - O(C * A)
+#### Time - O(M * N)  | Space - O(N)
 
 ```javascript
 /**
