@@ -17,7 +17,7 @@ Output: 1
 
 **Example 2:**
 
-![loonbalxballpoon](https://leetcode.com/problems/maximum-number-of-balloons/)
+![loonbalxballpoon](https://assets.leetcode.com/uploads/2019/09/05/1536_ex2_upd.JPG)
 
 ```java
 Input: text = "loonbalxballpoon"
