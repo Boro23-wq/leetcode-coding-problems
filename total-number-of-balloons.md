@@ -8,12 +8,16 @@
 
 **Example 1:**
 
+![nlaebolko](https://assets.leetcode.com/uploads/2019/09/05/1536_ex1_upd.JPG)
+
 ```java
 Input: text = "nlaebolko"
 Output: 1
 ```
 
 **Example 2:**
+
+![loonbalxballpoon](https://leetcode.com/problems/maximum-number-of-balloons/)
 
 ```java
 Input: text = "loonbalxballpoon"
