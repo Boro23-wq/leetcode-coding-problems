@@ -104,19 +104,27 @@ class Node {
 
 class Solution {
     public Node cloneGraph(Node node) {
+        // edge case 
         if (node == null) return null;
         
+        // hashmap to store the cloned node with its value
         HashMap<Integer, Node> map = new HashMap<>();
         
+        // return the neighbors of the node
         return cloneGraph(node, map);
     }
     
     private Node cloneGraph(Node node, HashMap<Integer, Node> map){
+        // if node already in map, return its value
         if (map.containsKey(node.val)) return map.get(node.val);
         
+        // if node not already in map create a new node
         Node copy = new Node(node.val);
+        // put the node into the map
         map.put(node.val, copy);
-        
+        // look through for all the neighbors of the current node
+        // and add it to the current neighbors list
+        // and recursively find the neighbors neighbor too
         for (Node neighbor : node.neighbors) copy.neighbors.add(cloneGraph(neighbor, map));
         
         return copy;
