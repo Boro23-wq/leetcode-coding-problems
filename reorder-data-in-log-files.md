@@ -60,11 +60,16 @@ class Solution {
             if (!isDigit1 && !isDigit2){
                 int value = main1.compareTo(main2);
                 
+                // in case when both the strings are equal
+                // sort by its id
                 if(value == 0) return id1.compareTo(id2);
                 
                 return value;
             }
             
+            // if both of them are digits, return 0
+            // else log2 is not a digit log or if isDigit2 is false, return 1
+            // else if log1 is a letter log or if isDigit1 is false, return -1
             return isDigit1 ? (isDigit2 ? 0 : 1) : -1;
         });
         
