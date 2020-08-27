@@ -1,7 +1,6 @@
-# Leetcode and BinarySearch.io coding-problems
-## This is me trying to solve leetcode and binarysearch.io coding problems.
+# Leetcode coding-problems
+## This is me trying to solve leetcode coding problems.
 
 My Leetcode Profile : [Leetcode](https://leetcode.com/fatboey/) <br>
-My BinarySearch.io Profile: [BinarySearch.io](https://binarysearch.io/@/23Boro)
 
 ---
