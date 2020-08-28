@@ -74,22 +74,29 @@ class Solution {
         // if already visited or 1 retur true
         if (grid[i][j] == 1 || grid[i][j] == -1) return true;
         
-        // check if its on perimeter
+        // after few recursive steps it might so happen
+        // that we reach the end of the matrix or are at the perimeter
+        // check if its on perimeter if yes return false
         if (isOnPerimeter(grid, i, j, rows, cols)) return false;
         
         // if we reach here the number is a 0 and 
         // not on a perimeter
         grid[i][j] = -1;
         
+        // moving directions 
+        // exploring all the neighboring elements
+        // of the current element
         boolean left = isClosedIsland(grid, i, j - 1, rows, cols);
         boolean right = isClosedIsland(grid, i, j + 1, rows, cols);
         boolean top = isClosedIsland(grid, i - 1, j, rows, cols);
         boolean bottom = isClosedIsland(grid, i + 1, j, rows, cols);
         
+        // return true only if left, right, top, bottom are true
         return left && right && top && bottom;
         
     }
     
+    // helper function to check if the item is on the perimeter
     private boolean isOnPerimeter(int[][] grid, int i, int j, int rows, int cols){
         return i == 0 || j == 0 || i == rows-1 || j == cols-1;
     }
