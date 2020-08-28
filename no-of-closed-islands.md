@@ -41,7 +41,7 @@ Output: 2
 
 ---
 
-## Solution (Time - O(m*n) | Space - O(n))
+## Solution (Time - O(m*n) | Space - O(m*n))
 
 ```java
 class Solution {
