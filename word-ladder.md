@@ -115,3 +115,92 @@ class Solution {
     }
 }
 ```
+
+---
+
+## Complete Code:
+
+```java
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Main {
+
+  public static int WordLadder(String beginWord, String endWord, HashSet<String> wordDictionary){
+
+    if (!wordDictionary.contains(endWord)) return 0;
+
+    Queue<String> queue = new LinkedList<>();
+    queue.add(beginWord);
+
+    HashSet<String> visited = new HashSet<>();
+    visited.add(beginWord);
+
+    int changes = 1;
+
+    while (!queue.isEmpty()){
+      int queueSize = queue.size();
+
+      for ( int i = 0; i < queueSize; i++){
+        String word = queue.poll();
+
+        if (word.equals(endWord)) return changes;
+
+        for (int j = 0; j < word.length(); j++){
+          for (int k = 'a'; k <= 'z'; k++){
+
+            char[] arrayOfChars = word.toCharArray();
+            
+            arrayOfChars[j] = (char) k;
+
+            String str = new String(arrayOfChars);
+
+            if (wordDictionary.contains(str) && !visited.contains(str)){
+              queue.add(str);
+              visited.add(str);
+            }
+          }
+        }
+      }
+      ++changes;
+    }
+
+    return 0;
+  }
+
+  public static void main(String[] args) {
+    HashSet<String> wordDictionary = new HashSet<String>();
+    // "hot","dot","dog","lot","log","cog"
+
+    // wordDictionary.add("hot");
+    // wordDictionary.add("dot");
+    // wordDictionary.add("dog");
+    // wordDictionary.add("lot");
+    // wordDictionary.add("log");
+    // wordDictionary.add("cog");
+
+    // String beginWord = "hit";
+    // String endWord = "cog";
+
+    // Expected Output -> 5
+
+    // -----------------------------
+
+    // ["hot","dot","dog","lot","log"]
+
+    wordDictionary.add("hot");
+    wordDictionary.add("dot");
+    wordDictionary.add("dog");
+    wordDictionary.add("lot");
+    wordDictionary.add("log");
+
+    String beginWord = "hit";
+    String endWord = "cog";
+
+    // Expected Output -> 0
+
+    System.out.print("Length of shortest chain is: " + WordLadder(beginWord, endWord, wordDictionary)); 
+  }
+}
+```
