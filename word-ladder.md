@@ -43,23 +43,36 @@ Output: 0
 
 ---
 
-## Solution (Time - O()  | Space - O())
+## Solution (Time - O(M^2 * N)  | Space - O(M * N))
+
+**M -> Size of our dequed word**
+**N -> Size of the word list**
 
 ```java
 class Solution {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        // convert the wordList to a set
+        // because we need to loop through the words
+        // and set has a constant time lookup
         Set<String> set = new HashSet<>(wordList);
         
+        // if set don't contain the word 
+        // there is no possible transition
+        // and we need to return 0
         if (!set.contains(endWord)) return 0;
         
+        // keep track of words using a queue
+        // typical BFS implementation
         Queue<String> queue = new LinkedList<>();
         queue.add(beginWord);
         
+        // keep track of all the visited words
         Set<String> visited = new HashSet<>();
         visited.add(beginWord);
         
         int changes = 1;
         
+        // loop through until the queue is empty
         while (!queue.isEmpty()){
             int size = queue.size();
             
@@ -74,11 +87,18 @@ class Solution {
                 for (int j = 0; j < word.length(); j++){
                     // check for all combinations from 'a' to 'z'
                     for (int k = 'a'; k <= 'z'; k++){
+                        // convert the string of words to char array
+                        // so we can loop through individual char at a time and modify them
                         char[] arr = word.toCharArray();
                         arr[j] = (char) k;
                         
+                        // convert them back to string to form the word
                         String str = new String(arr);
                         
+                        // if the word list set has the word 'str' 
+                        // and the visited set doesn't already contain the word 'str'
+                        // add it to the queue
+                        // and the visited set as well
                         if (set.contains(str) && !visited.contains(str)){
                             queue.add(str);
                             visited.add(str);
