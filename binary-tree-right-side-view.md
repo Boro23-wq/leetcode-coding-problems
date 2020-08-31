@@ -40,21 +40,32 @@ class Solution {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         
-        // edge case check
+        // edge case
         if (root == null) return result;
         
+        // BFS Approach using Queue
         Queue<TreeNode> queue = new LinkedList<>();
+        // add the root to the queue
         queue.add(root);
         
         while(!queue.isEmpty()){
-            
+            // store the size of the queue
+            // to pop size no of times
             int size = queue.size();
             
-            for (int i = 0; i < size; i++){
+            for (int i = 1; i <= size; i++){
                 TreeNode node = queue.poll();
                 
-                if (i == size - 1) result.add(node.val);
+                // to add the rightmost element 
+                // to the queue 
+                // i == size (since 'i' is 0-indexed based)
+                // that means rightmost node element
+                // add it to the result list
+                if (i == size) result.add(node.val);
                 
+                // typical BFS implementation
+                // add the right and left nodes
+                // of current node if exists
                 if (node.left != null) queue.add(node.left);
                 if (node.right != null) queue.add(node.right);
             }
