@@ -29,6 +29,7 @@ Output: [3, 14.5, 11]
 
 ```java
 /**
+/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -49,22 +50,30 @@ class Solution {
         
         if (root == null) return result;
         
-        // queue
+        // bfs approach using a queue
         Queue<TreeNode> queue = new LinkedList<>();
+        // add the root node to the queue
         queue.add(root);
         
         while (!queue.isEmpty()){
+            // take the size of the queue
+            // for finding the average
             int size = queue.size();
+            // sum to calculate the sum
+            // at each level
             double sum = 0;
             
             for (int i = 0; i < size; i++){
+                // poll from the queue
+                // and add it to the sum
                 TreeNode node = queue.poll();
                 sum += node.val;
                 
+                // push left and right nodes into the queue
                 if (node.left != null) queue.add(node.left);
                 if (node.right != null) queue.add(node.right);
             }
-            
+            // finding average 
             result.add(sum/size);
         }
         
