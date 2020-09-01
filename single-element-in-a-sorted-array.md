@@ -40,25 +40,33 @@ class Solution {
         
         while (left < right){
             int mid = left + (right-left) / 2;
+            // check for even numbers
             boolean isEven = (right - mid) % 2 == 0;
             
+            // check the value at mid to the left
             if (nums[mid] == nums[mid - 1]){
                 
+                // check if even
                 if (isEven){
+                    // if even theres no point moving right since the elements
+                    // should all appear twice
                     // ignore the duplicate element to the left of mid
                     right = mid - 2;
                 } else{
-                    // if odd move towards right
+                    // if odd we know we can find
+                    // the single element towards the right
                     left = mid + 1;
                 }
                 
-                
+              // else check value at mid == mid + 1
             } else if (nums[mid] == nums[mid + 1]){
                 
                 if (isEven){
+                     // if even we need to move right since it is only even considering the duplicate element
                     // ignore the duplicate number directly to the right of mid
                     left = mid + 2;
                 } else{
+                    // else move left
                     right = mid - 1;
                 }
             }
