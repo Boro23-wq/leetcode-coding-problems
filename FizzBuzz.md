@@ -30,7 +30,10 @@ Return:
 ```
 ---
 
-## Solution (Approach - 1)
+## Solution (Basic Approach)
+
+#### Time - O(n) | Space - O(n)
+
 
 ```javascript
 /**
@@ -58,6 +61,8 @@ var fizzBuzz = function (n) {
 ---
 
 ## Solution (Optimized Approach)
+
+#### Time - O(n) | Space - O(n)
 
 ```javascript
 /**
@@ -90,6 +95,8 @@ var fizzBuzz = function (n) {
 ```
 
 ## Solution (Optimized using Map)
+
+#### Time - O(m * n) | Space - O(n)
 
 ```javascript
 /**
