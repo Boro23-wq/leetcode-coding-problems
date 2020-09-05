@@ -89,6 +89,41 @@ var fizzBuzz = function (n) {
 }
 ```
 
+## Solution (Optimized using Map)
+
+```javascript
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var fizzBuzz = function (n) {
+  let result = []
+
+  let mappings = {
+    3: "Fizz",
+    5: "Buzz",
+  }
+
+  for (let i = 1; i <= n; i++) {
+    let string = ""
+
+    for (let key in mappings) {
+      if (i % parseInt(key, 10) === 0) {
+        string += mappings[key]
+      }
+    }
+
+    if (string.length === 0) {
+      string += i
+    }
+
+    result.push(string)
+  }
+
+  return result
+}
+```
+
 
 
 
