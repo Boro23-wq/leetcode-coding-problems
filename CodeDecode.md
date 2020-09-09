@@ -163,11 +163,11 @@ class Main
             if ( i % 15 == 0)
                 System.out.println("CodeDecode");  
             else if (i % 5 == 0)      
-                System.out.println("Decode"+" ");  
+                System.out.println("Decode");  
             else if (i % 3 == 0)      
-                System.out.println("Code"+" ");        
+                System.out.println("Code");        
             else
-                System.out.println(i+" ");                          
+                System.out.println(i);                          
         } 
     } 
 }
