@@ -120,3 +120,56 @@ console.log(codeDecode(15))
 
 ---
 
+## CodeDecode in Java
+
+---
+
+### Approach - 1
+
+```java
+class Main 
+{ 
+    public static void main(String args[]) 
+    {  
+        int n = 15; 
+
+        for (int i = 1; i <= n; i++){ 
+            String string = "";
+
+            if (i % 3 == 0)
+                string += "Code";
+            if (i % 5 == 0)
+                string += "Decode";
+            if (string.length() == 0)
+                string += i;
+            System.out.println(string);       
+        }
+    } 
+}
+```
+---
+
+### Approach - 2
+
+```java
+class Main 
+{ 
+    public static void main(String args[]) 
+    {  
+        int n = 4; 
+
+        for (int i=1; i<=n; i++)                                  
+        { 
+            if ( i % 15 == 0)
+                System.out.println("CodeDecode");  
+            else if (i % 5 == 0)      
+                System.out.println("Decode"+" ");  
+            else if (i % 3 == 0)      
+                System.out.println("Code"+" ");        
+            else
+                System.out.println(i+" ");                          
+        } 
+    } 
+}
+```
+
