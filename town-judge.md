@@ -58,7 +58,7 @@ Output: 3
 
 ---
 
-## Solution
+## Solution (Time - O(n) |   Space - O(n))
 
 ```javascript
 /**
@@ -68,20 +68,32 @@ Output: 3
  */
 var findJudge = function(N, trust) {
     
-    // [0, 0, 0]
+    // array of size N+1 since there
+    // wouldnt be any person '0'
     let count = new Array(N + 1).fill(0);
     
+    // for [i, j] of trust
+    // i -> person who trusts
+    // j -> person who is trusted
     for(let [i, j] of trust){
+        // decrease the count of person trusting
         count[i] -= 1;
+        // increase the count of person trusted
         count[j] += 1;
     }
     
+    // run through the count array and check
+    // if there is a person with count trusts === total people - 1
+    // -1 would be himself as the town judge trusts nobody
     for (let i = 1; i < count.length; i++){
         if (count[i] === (N-1)){
+            // if a town judge is found
+            // return him
             return i;
         }
     }
     
+    // if not found return -1
     return -1;
 };
 ```
