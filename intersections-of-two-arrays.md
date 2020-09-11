@@ -32,19 +32,28 @@ Output: [9,4]
  * @return {number[]}
  */
 var intersection = function(nums1, nums2) {
+    // two sets to keep track of intersected numbers
     let firstSet = new Set();
     let secondSet = new Set();
     
+    // run through nums1
+    // and store all of its values in a set
     for (let nums of nums1){
         firstSet.add(nums);
     }
     
+    // run through nums2 and add its values in
+    // the secondSet if and only if the number
+    // is available in the firstSet
+    // we use set to make sure the repeated numbers 
+    // only appear once in the set
     for (let nums of nums2){
         if (firstSet.has(nums)){
             secondSet.add(nums)
         }
     }
     
+    // convert the set to an array 
     return Array.from(secondSet);
 };
 ```
