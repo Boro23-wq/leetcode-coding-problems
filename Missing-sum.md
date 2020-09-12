@@ -30,8 +30,13 @@ Output: 8
  * @return {number}
  */
 var missingNumber = function(nums) {
-    // [3, 0, 1]
-    let sumIfNoneMissing = nums.length; // 3
+    // [0,1,2,3,5]
+    // sum if none of the elements were missing
+    // length + indices will give sum of elements
+    // in an array without missing elements
+    let sumIfNoneMissing = nums.length; // 5 + 10 = 15
+    // missing numbers can be found
+    // by adding the elements in the array
     let sumAfterMissing = 0;
     
     for (let i = 0; i < nums.length; i++){
@@ -39,6 +44,8 @@ var missingNumber = function(nums) {
         sumAfterMissing += nums[i];
     }
     
+    // substracting sumAfterMissing from sumIfNoneMissing
+    // gives us the missing number
     return sumIfNoneMissing - sumAfterMissing;
 };
 ```
