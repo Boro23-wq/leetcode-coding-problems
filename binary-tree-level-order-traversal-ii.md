@@ -24,7 +24,7 @@ return its bottom-up level order traversal as:
 ```
 ---
 
-## Solution (Time - O(n) | Space - O(n))
+## Solution (Time - O(V+E) | Space - O(V))
 
 ```javascript
 /**
