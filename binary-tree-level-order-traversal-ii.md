@@ -40,27 +40,46 @@ return its bottom-up level order traversal as:
  * @return {number[][]}
  */
 var levelOrderBottom = function(root) {
+    // array that stores the final result
+    // after bottom-up level order traversal
     let result = [];
     
     if (root === null) return result;
     
+    // BFS approach, we use a queue
+    // for this approach
     let queue = [];
+    // push the root node to the queue
     queue.push(root);
     
+    // continue until queue is empty
     while (queue.length != 0){
+        // we take the count of total nodes inside the queue
+        // since for the later part we might have left and right
+        // child since we need to push all the nodes in a level 
+        // at a time
         let nodeCount = queue.length;
+        // helperRowArray helps us with
+        // storing nodes in a level
         let helperRowArray = []
         
         while (nodeCount > 0){
+            // remove elements from the start of the queue
             let currentNode = queue.shift();
             
+            // and check if current node has left and right nodes
+            // if yes, push them to the queue
             if (currentNode.left !== null) queue.push(currentNode.left)
             if (currentNode.right !== null) queue.push(currentNode.right)
             
+            // finally push all the nodes in a level
+            // to the helperRowArray that later gets pushed
+            // to the resultant array
             helperRowArray.push(currentNode.val)
             nodeCount--           
         }
-        
+        // push items to the start of the queue
+        // so they stack up reverserd (bottom-up) 
         result.unshift(helperRowArray)
     }
     
