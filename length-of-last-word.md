@@ -23,15 +23,27 @@ Output: 5
  * @return {number}
  */
 var lengthOfLastWord = function(s) {
+    // counter variable to store the 
+    // count of the last word
     let lengthOfLastWord = 0;
+    // boolean to store if we are before 
+    // the first nonEmpty Char
+    // or before the last word
     let beforeFirstNonEmptyChar = true;
     
     if (s.length === 0) return 0;
     
     for (let i = s.length - 1; i >= 0; i--){
+        // if there is a char
+        // increment the counter
+        // and set the boolean to false 
+        // since we have encountered the last word
         if(s.charAt(i) !== ' '){
             beforeFirstNonEmptyChar = false;
             lengthOfLastWord += 1;
+        // if no char check
+        // if we are still ahead of the lastWord
+        // if not than break out of the loop and return the count
         } else {
             if (!beforeFirstNonEmptyChar){
                 break;
