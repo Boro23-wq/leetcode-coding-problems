@@ -76,13 +76,20 @@ var rotate = function(nums, k) {
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var rotate = function(nums, k) {
+    // reverse only k % length of nums number of times
+    // avoid extra rotation
     let rotate = k % nums.length;
     
+    // reverse the entire array at first
     reverse(nums, 0, nums.length - 1);
+    // reverse the array rotate number of times 
+    // from front
     reverse(nums, 0, rotate - 1);
+    // reverse the rest of the array
     reverse(nums, rotate, nums.length - 1);
 };
 
+// helper function for reversing the array
 let reverse = (nums, start, end) => {
     while (start < end){
         let temp = nums[start]
