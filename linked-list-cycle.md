@@ -54,7 +54,7 @@ Explanation: There is no cycle in the linked list.
 ## Solution (Time - O(n)  |   Space - O(1))
 
  ```javascript
- /**
+/**
  * Definition for singly-linked list.
  * function ListNode(val) {
  *     this.val = val;
@@ -68,13 +68,20 @@ Explanation: There is no cycle in the linked list.
  */
 var hasCycle = function(head) {
     
+    // two pointer technique
     let fastPointer = head;
     let slowPointer = head;
     
+    // if fastPointer ever gets null
+    // that means there are no cycle
     while (fastPointer !== null && fastPointer.next !== null){
+        // move fastPointer two steps ahead
         fastPointer = fastPointer.next.next;
+        // move slowPointer two steps ahead
+
         slowPointer = slowPointer.next;
-        
+        // if there is a cycle eventually
+        // the two pointers will meet at a position
         if (fastPointer === slowPointer) return true;
     }
     
