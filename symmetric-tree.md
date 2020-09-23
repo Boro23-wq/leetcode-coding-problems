@@ -49,12 +49,17 @@ var isSymmetric = function(root) {
 };
 
 var isMirror = function(tree1, tree2){
+    // check if any of the node passed is a null
     if (tree1 === null  || tree2 == null){
         return tree1 === tree2;
     }
     
+    // if the values are not equal then
+    // they are not symmetric
     if (tree1.val !== tree2.val) return false;
     
+    // else recursively call for the left and right 
+    // of both the trees and check if they are equal
     return isMirror(tree1.left, tree2.right) && isMirror(tree1.right, tree2.left);
 };
 ```
