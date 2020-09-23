@@ -66,5 +66,5 @@ var isMirror = function(tree1, tree2){
 
 ### Results
 
-***Runtime:*** 72 ms, faster than 99.40% of JavaScript online submissions for Symmetric Tree.
+***Runtime:*** 72 ms, faster than 99.40% of JavaScript online submissions for Symmetric Tree. </br>
 ***Memory Usage:*** 39.1 MB, less than 8.87% of JavaScript online submissions for Symmetric Tree.
