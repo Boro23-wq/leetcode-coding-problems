@@ -28,38 +28,41 @@ But the following `[1,2,2,null,3,null,3]` is not:
 
 ```javascript
 /**
+/**
  * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
  * }
  */
 /**
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function(root) {
-    // an empty tree is a mirror of itself (symmetric)
-    if (root === null) return true;
+let isSymmetric = function(root) {
+    if (root === null) {
+        return true;
+    }
     
-    // pass in the left and right nodes of root
-    // for comparision
+    // pass in the left and right child nodes
     return isMirror(root.left, root.right);
 };
 
-var isMirror = function(tree1, tree2){
-    // check if any of the node passed is a null
-    if (tree1 === null  || tree2 == null){
+let isMirror = function(tree1, tree2) {
+    // if either node is null, we are at a leaf node. either they are the same, in which case we can return true
+    // if one is null and the other is not, we can return false
+    if (tree1 === null || tree2 === null) {
         return tree1 === tree2;
     }
     
-    // if the values are not equal then
-    // they are not symmetric
-    if (tree1.val !== tree2.val) return false;
+    // check the values of the nodes. if they are not the same, we can return false. otherwise, skip this if statement
+    if (tree1.val !== tree2.val) {
+        return false;
+    }
     
-    // else recursively call for the left and right 
-    // of both the trees and check if they are equal
+    // since we got past the first two if statements, make two recursive calls to test if the children are mirror images
+    // the left node of the right child should be the same as the right node of the left child
+    // likewise, the left node of the left child should be the same as the right node of the right child
     return isMirror(tree1.left, tree2.right) && isMirror(tree1.right, tree2.left);
 };
 ```
