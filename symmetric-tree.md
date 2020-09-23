@@ -63,3 +63,8 @@ var isMirror = function(tree1, tree2){
     return isMirror(tree1.left, tree2.right) && isMirror(tree1.right, tree2.left);
 };
 ```
+
+### Results
+
+***Runtime:*** 72 ms, faster than 99.40% of JavaScript online submissions for Symmetric Tree.
+***Memory Usage:*** 39.1 MB, less than 8.87% of JavaScript online submissions for Symmetric Tree.
