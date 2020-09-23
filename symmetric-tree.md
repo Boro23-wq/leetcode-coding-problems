@@ -71,3 +71,31 @@ let isMirror = function(tree1, tree2) {
 
 ***Runtime:*** 72 ms, faster than 99.40% of JavaScript online submissions for Symmetric Tree. </br>
 ***Memory Usage:*** 39.1 MB, less than 8.87% of JavaScript online submissions for Symmetric Tree.
+
+## Solution (Iterative Approach using Queue)
+
+```javascript
+var isSymmetric = function(root) {
+   let q = [];
+    
+    q.push(root, root);
+    
+    while (q.length > 0){
+        let node1 = q.shift();
+        let node2 = q.shift();
+        
+        if (node1 === null && node2 === null) continue;
+        if (node1 === null || node2 === null) return false;
+        if (node1.val != node2.val) return false;
+        
+        q.push(node1.left, node2.right);
+        q.push(node1.right, node2.left);
+    }
+    
+    return true;
+};
+```
+
+***Runtime:*** Runtime: 84 ms, faster than 82.19% of JavaScript online submissions for Symmetric Tree. </br>
+***Memory Usage:*** 38.6 MB, less than 78.02% of JavaScript online submissions for Symmetric Tree.
+
