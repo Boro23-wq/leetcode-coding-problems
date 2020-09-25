@@ -15,7 +15,7 @@ Output: 1
 
 ---
 
-## Solution Code (Time - O() | Space - O())
+## Solution Code (Time - O(N) | Space - O(1))
 
 ```java
 class Solution {
