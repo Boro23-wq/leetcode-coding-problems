@@ -78,3 +78,8 @@ class Solution {
     }
 }
 ```
+
+### Submission Details:
+
+***Runtime:*** 2 ms, faster than 98.52% of Java online submissions for Minimum Time Difference. <br/>
+***Memory Usage:*** 39.1 MB, less than 89.75% of Java online submissions for Minimum Time Difference.
