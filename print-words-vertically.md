@@ -1,10 +1,6 @@
 # Leetcode Problem #1324. Print Words Vertically
 
-**Given a string s. Return all the words vertically in the same order in which they appear in s.**
-
-**Words are returned as a list of strings, complete with spaces when is necessary. (Trailing spaces are not allowed).**
-
-**Each word would be put on only one column and that in one column there will be only one word.**
+**Given a string s. Return all the words vertically in the same order in which they appear in s. Words are returned as a list of strings, complete with spaces when is necessary. (Trailing spaces are not allowed). Each word would be put on only one column and that in one column there will be only one word.**
 
 **Example 1:**
 
@@ -109,3 +105,8 @@ class Solution {
     }
 }
 ```
+
+**Submission Details:**
+
+***Runtime:*** 0 ms, faster than 100.00% of Java online submissions for Print Words Vertically. <br/>
+***Memory Usage:*** 37.7 MB, less than 82.77% of Java online submissions for Print Words Vertically.
