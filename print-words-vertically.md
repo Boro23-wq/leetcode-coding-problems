@@ -45,7 +45,7 @@ Output: ["CIC","OSO","N M","T I","E N","S G","T"]
 
 ---
 
-## Solution Code - Time(O()) | Space(O())
+## Solution Code - Time(O(M*N)) | Space(O(N))
 
 ```java
 class Solution {
