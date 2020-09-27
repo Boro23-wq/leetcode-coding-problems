@@ -25,8 +25,8 @@ Input
 Output
 [null,null,null,null,null,null,null,14.00000,11.00000,null,11.00000,null,12.00000]
 ```
+***Explanation***
 ```
-Explanation
 UndergroundSystem undergroundSystem = new UndergroundSystem();
 undergroundSystem.checkIn(45, "Leyton", 3);
 undergroundSystem.checkIn(32, "Paradise", 8);
@@ -52,8 +52,8 @@ Input
 Output
 [null,null,null,5.00000,null,null,5.50000,null,null,6.66667]
 ```
+***Explanation***
 ```
-Explanation
 UndergroundSystem undergroundSystem = new UndergroundSystem();
 undergroundSystem.checkIn(10, "Leyton", 3);
 undergroundSystem.checkOut(10, "Paradise", 8);
@@ -79,5 +79,95 @@ undergroundSystem.getAverageTime("Leyton", "Paradise"); // return 6.66667
 ## Solution (Java Code) - (Time - O()  |   Space - O())
 
 ```java
+class UndergroundSystem {
+    
+    // delimeter for start and end station
+    private final String DELIMETER = ",";
+    
+    private Map<Integer, Event> arrivals;
+    private Map<String, Average> averages;
 
+    public UndergroundSystem() {
+        
+        // create two maps
+        // one for arrivals and the other for averages
+        arrivals = new HashMap<>();
+        averages = new HashMap<>();
+        
+    }
+    
+    public void checkIn(int id, String stationName, int t) {
+        // key value pair stored in the arrivals
+        // stores the id of the customer and its event
+        arrivals.put(id, new Event(id, stationName, t));
+    }
+    
+    public void checkOut(int id, String stationName, int t) {
+        // pull out the customer that checks out
+        Event arrivalEvent = arrivals.get(id);
+        // remove the arrivals since they already checked out
+        arrivals.remove(id);
+        
+        // compute the time between checkin and checkout
+        int diff = t - arrivalEvent.time; 
+        
+        // compute the key using the delimeter
+        String key = arrivalEvent.stationName + DELIMETER + stationName;
+        
+        // use the above computed key to find the average
+        // but there may be chances that this key is not already in our map
+        // so we need to perform an extra edge case here
+        
+        Average average = averages.containsKey(key) ? averages.get(key) : new Average();
+        average.updateAverage(diff);
+        
+        // add it to the map
+        averages.put(key, average);
+    }
+    
+    public double getAverageTime(String startStation, String endStation) {
+        // compute the key once again
+        String key = startStation + DELIMETER + endStation;
+        return averages.get(key).getAverage();
+    }
+    
+    class Event {
+        public int id;
+        public String stationName;
+        public int time;
+        
+        public Event(int id, String stationName, int time){
+            this.id = id;
+            this.stationName = stationName;
+            this.time = time;
+        }
+    }
+    
+    class Average {
+        public double total = 0;
+        public int count = 0;
+        
+        // update average count
+        // average map -> Average<total, count>
+        // total -> time taken between checkin and checkout between stations
+        // count -> no. of customers through that station
+        public void updateAverage(int diff){
+            ++count;
+            total += diff;
+        }
+        
+        // return the average
+        public double getAverage(){
+            return total / count;
+        }
+    }
+}
+
+/**
+ * Your UndergroundSystem object will be instantiated and called as such:
+ * UndergroundSystem obj = new UndergroundSystem();
+ * obj.checkIn(id,stationName,t);
+ * obj.checkOut(id,stationName,t);
+ * double param_3 = obj.getAverageTime(startStation,endStation);
+ */
 ```
