@@ -173,6 +173,6 @@ class UndergroundSystem {
 ```
 
 ## Submission Details:
-***Runtime:*** 87 ms, faster than 84.05% of Java online submissions for Design Underground System.
+***Runtime:*** 87 ms, faster than 84.05% of Java online submissions for Design Underground System. <br/>
 ***Memory Usage:*** 51.8 MB, less than 96.76% of Java online submissions for Design Underground System.
 
