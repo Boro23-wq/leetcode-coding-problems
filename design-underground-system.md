@@ -76,7 +76,7 @@ undergroundSystem.getAverageTime("Leyton", "Paradise"); // return 6.66667
 
 ---
 
-## Solution (Java Code) - (Time - O()  |   Space - O())
+## Solution (Java Code) - (Time - O(1)  |   Space - O(N+M))
 
 ```java
 class UndergroundSystem {
