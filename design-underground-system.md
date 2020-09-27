@@ -171,3 +171,8 @@ class UndergroundSystem {
  * double param_3 = obj.getAverageTime(startStation,endStation);
  */
 ```
+
+## Submission Details:
+***Runtime:*** 87 ms, faster than 84.05% of Java online submissions for Design Underground System.
+***Memory Usage:*** 51.8 MB, less than 96.76% of Java online submissions for Design Underground System.
+
