@@ -39,4 +39,39 @@ Explanation: There are three ways to climb to the top.
 ## Solution Code 
 
 ```javascript
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+    
+    // recursive function
+    let countingFunc = (stairsRemaining, storedResult) => {
+        // edge case if there are negative remaining staircases
+        // do not add it to the result
+        if (stairsRemaining < 0) return 0;
+        // if stairs remaining === 0
+        // we have reached our destination
+        if (stairsRemaining === 0) return 1;
+        
+        // memoization, check if the result
+        // is already computed (in the map)
+        if (storedResult[stairsRemaining]){
+            return storedResult[stairsRemaining];
+        }
+        
+        // add the result to the map
+        storedResult[stairsRemaining] = countingFunc(stairsRemaining - 1, storedResult) + countingFunc(stairsRemaining - 2, storedResult);
+        
+        return storedResult[stairsRemaining];
+    }
+    
+    return countingFunc(n, {});
+};
 ```
+
+## Submission Details
+
+***Runtime:*** 72 ms, faster than 80.09% of JavaScript online submissions for Climbing Stairs. <br/>
+***Memory Usage:*** 38.7 MB, less than 5.03% of JavaScript online submissions for Climbing Stairs.
+
