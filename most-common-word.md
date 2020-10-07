@@ -43,36 +43,50 @@ and that "hit" isn't the answer even though it occurs more because it is banned.
  * @return {string}
  */
 var mostCommonWord = function(paragraph, banned) {
+    // object to store all the valid words that are not banned
     let validWordFrequency = {};
+    // Set to store the banned words
+    // so that the lookup is constant
     let bannedWords = new Set();
+    // the word with most frequency will be returned eventually
     let mostCommonWord = '';
     
+    // regex to trim any unneccessary chars off the word
     let words = paragraph.split(/\W+/);
 
+    // moved all the words from banned to the 'bannedWords' set
     for (let word of banned){
         bannedWords.add(word);
     }
     
+    // for all the words in paragraph
     for (let word of words){
+        // convert them to lowercase since, we are comparing
+        // them to lowercase words in the bannedWords set
         let lowerCaseWord = word.toLowerCase();
         
+        // into this loop only if the word is not in the banned set
         if(!bannedWords.has(lowerCaseWord)){
+            // if the word is not already in the map
             if(validWordFrequency[lowerCaseWord] === undefined){
                 validWordFrequency[lowerCaseWord] = 0;
             } 
+            // increment the count for every word (if it appears multiple times)
             validWordFrequency[lowerCaseWord]++
             
+            // put the first word as the mostCommonWord since no other
+            // words have appeared before that
             if(mostCommonWord === ''){
                 mostCommonWord += lowerCaseWord;
             }
             
+            // check in the map the freq of the word and the mostCommonWord
+            // replace mostCommonWord if the word has higher frequency
             if(validWordFrequency[lowerCaseWord] > validWordFrequency[mostCommonWord]){
                 mostCommonWord = lowerCaseWord;
             }
         }
     }
-    
     return mostCommonWord;
-    
 };
 ```
