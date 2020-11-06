@@ -28,7 +28,8 @@ There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.
 
 ---
 
-## Solution (BFS Approach) (Time - O(n^2 * 2^n)  | Space - O(2^n))
+## Solution (BFS Approach) 
+#### (Time Complexity - O(n^2 * 2^n)  | Space Complexity - O(2^n))
 
 ```java
 class Solution {
