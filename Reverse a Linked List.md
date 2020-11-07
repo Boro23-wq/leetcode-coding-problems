@@ -11,7 +11,8 @@ Output: 5->4->3->2->1->NULL
 
 A linked list can be reversed either iteratively or recursively. Could you implement both?
 
-**APPROACH: 1 (ITERATIVE APPROACH)**
+**APPROACH: 1 **
+#### (ITERATIVE APPROACH)
 ----
 
  ```javascript
@@ -44,7 +45,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
  };
 ```
 
-**APPROACH: 2 (RECURSIVE APPROACH)**
+**APPROACH: 2**
 ---
 
 
