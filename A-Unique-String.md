@@ -1,4 +1,4 @@
-# BinarySearch.io Problem #28: A unique string
+# BinarySearch.io Problem #28: A Unique String
 
 ## Problem Statement:
 
