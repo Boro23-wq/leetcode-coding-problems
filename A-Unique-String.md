@@ -32,6 +32,7 @@ Output: true
 ---
 
 ## **SOLUTION:**
+#### Time Complexity: O(n) 
 
 ```javascript
 const uniqueString = function(s){
