@@ -23,7 +23,7 @@ Output: false
 
 ## Solution Code:
 
-**Time Complextiy**: O(n)  |   **SPACE**: O(n)
+**Time Complextiy**: O(n)  |   **Space Complexity**: O(n)
 
 ```javascript
 var findPalindrome = function (s) {
