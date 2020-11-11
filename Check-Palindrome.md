@@ -53,7 +53,6 @@ var findPalindrome = function (s) {
 
 findPalindrome("nolemonnomelon") // nnoolemameloonn
 // findPalindrome("racecar") // racecar
-// findPalindrome("mygym") //mygym
 // findPalindrome("nogymn") // false
 // findPalindrome("racecara") // false
 ```
