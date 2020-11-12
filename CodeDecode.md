@@ -82,7 +82,6 @@ var codeDecode = (n) => {
       }
 
       result.push(string);
-
   }
   return result;
 }
