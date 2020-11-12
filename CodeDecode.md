@@ -76,7 +76,6 @@ var codeDecode = (n) => {
         string += mappings[key];
       }
     }
-
       if (string.length === 0){
         string += i;
       }
