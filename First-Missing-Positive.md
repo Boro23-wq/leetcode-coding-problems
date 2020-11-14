@@ -29,6 +29,7 @@ Output: 1
 ---
 
 ### **APPROACH-1 (Inefficient Solution):**
+#### Time Complexity - O(n)
 
 _This approach is inefficient because it uses a Set that has a linear space complexity (because in the worst case we may have to store all the items in the Set_).
 
