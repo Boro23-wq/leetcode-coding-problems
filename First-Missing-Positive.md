@@ -28,7 +28,7 @@ Output: 1
 > **Note:** Your algorithm should run in O(n) time and uses constant extra space.
 ---
 
-### **APPROACH-1 (Inefficient Solution - O(n) Time and O(n) Space):**
+### **APPROACH-1 (Inefficient Solution):**
 
 _This approach is inefficient because it uses a Set that has a linear space complexity (because in the worst case we may have to store all the items in the Set_).
 
