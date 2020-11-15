@@ -68,7 +68,7 @@ var findDuplicate = function(nums) {
 
 ### APPROACH-3 (Optimised Solution) - Floyd's Cycle Detection Algorithm / Tortoise and Hare 
 
-_Time-O(n) | Space-O(1)_
+#### Time Complexity - O(n) 
 
 ```javascript
 /**
