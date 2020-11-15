@@ -28,7 +28,7 @@ Output: 3
 
 ### APPROACH-1 (Inefficient Solution) - Takes extra space
 
-#### Time Complexity- O(n)
+#### Time Complexity- O(n) | Space Complexity - O(n)
 
 ```javascript
 var findDuplicate = function(nums) {
