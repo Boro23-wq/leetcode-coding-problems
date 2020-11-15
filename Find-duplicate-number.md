@@ -49,7 +49,7 @@ var findDuplicate = function(nums) {
 
 ### APPROACH-2 (Inefficient Solution) - Modifies the array
 
-#### Time Complexity - O(n) 
+#### Time Complexity - O(n) | Space - O(1)
 
 ```javascript
 var findDuplicate = function(nums) {
