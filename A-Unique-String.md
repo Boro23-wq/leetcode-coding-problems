@@ -1,4 +1,4 @@
-# Problem #28: A Unique String
+# Binary Search - Problem 28: A Unique String
 
 ## Problem Statement:
 
