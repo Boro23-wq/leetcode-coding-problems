@@ -1,4 +1,4 @@
-# Leetcode Problem #41: First Missing Positive
+# Leetcode Problem 41: First Missing Positive
 
 ## Problem Statement:
 
