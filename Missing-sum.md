@@ -22,7 +22,8 @@ Output: 8
 
 ---
 
-## Solution (Time - O(n) | Space - O(1))
+## Solution 
+#### Time Complexity - O(n)
 
 ```javascript
 /**
