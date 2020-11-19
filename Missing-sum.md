@@ -23,7 +23,7 @@ Output: 8
 ---
 
 ## Solution 
-#### Time Complexity - O(n)
+#### Time Complexity - O(n) |  Space Complexity - O(1)
 
 ```javascript
 /**
