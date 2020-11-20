@@ -26,7 +26,7 @@ Consider the following matrix:
 ---
 ### Optimal Solution: 
 
-**Time** - O(log(mn))  |   **Space** - O(1)
+**Time Complexity** - O(log(mn))  |   **Space** - O(1)
 
 ```javascript
 /**
