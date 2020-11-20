@@ -1,4 +1,4 @@
-# Leetcode Problem #240. Search a 2D Matrix II
+# Leetcode Problem 240. Search a 2D Matrix II
 
 Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
 
