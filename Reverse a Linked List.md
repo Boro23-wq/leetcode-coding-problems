@@ -45,7 +45,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
  };
 ```
 
-**APPROACH: 2**
+## APPROACH: 2
 #### (ITERATIVE APPROACH)
 ---
 
