@@ -1,4 +1,4 @@
-# Leetcode Problem #133. Clone Graph
+# Leetcode Problem 133. Clone Graph
 
 **Given a reference of a node in a connected undirected graph.**
 
