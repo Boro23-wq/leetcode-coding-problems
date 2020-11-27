@@ -45,7 +45,7 @@ the answer is guaranteed to fit into signed 32-bit integer
 ---
 
 ## Solution 1: 
-#### Time - O(N)  | Space - O(M * N)
+#### Time Complexity - O(N)  | Space - O(M * N)
 
 ```javascript
 /**
