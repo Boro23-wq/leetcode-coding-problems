@@ -1,4 +1,4 @@
-# Leetcode Problem #518. Coin Change 2
+# Leetcode Problem 518. Coin Change 2
 
 ## Problem Statement: 
 
