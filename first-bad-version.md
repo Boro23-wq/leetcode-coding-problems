@@ -20,7 +20,7 @@ Then 4 is the first bad version.
 
 ---
 
-## Solution (Time - O(logN)  | Space - O(1))
+## Solution (Time Complexity - O(logN)  | Space - O(1))
 
 ```javascript
 /**
