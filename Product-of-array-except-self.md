@@ -1,4 +1,4 @@
-# Leetcome Problem #238: Product of Array Except Self
+# Leetcome Problem 238: Product of Array Except Self
 
 ## Problem Statement:
 
