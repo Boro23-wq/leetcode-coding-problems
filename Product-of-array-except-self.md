@@ -20,7 +20,7 @@ Output: [24,12,8,6]
 
 **EFFICIENT SOLUTION :** 
 
-#### Time: O(n) | Space: O(1), since it is given the output array doesn't count as extra space.
+#### Time Complexity: O(n) | Space: O(1), since it is given the output array doesn't count as extra space.
 
 ```javascript
 /**
