@@ -1,4 +1,4 @@
-# Leetcode Problem #646. Maximum Length of Pair Chain
+# Leetcode Problem 646. Maximum Length of Pair Chain
 
 **You are given n pairs of numbers. In every pair, the first number is always smaller than the second number.**
 
