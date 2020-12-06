@@ -21,7 +21,7 @@ Output: 2
 
 ---
 
-## Solution (Time - O(nlogn)  | Space - O(1))
+## Solution (Time Complexity - O(nlogn)  | Space - O(1))
 
 ```java
 class Solution {
