@@ -22,7 +22,7 @@ trie.search("app");     // returns true
 
 ---
 
-## Solution (Time Complexity - O(n) | Space - O(n))
+## Solution (Time Complexity - O(n) | Space Complexity - O(n))
 
 ```java
 class Trie {
