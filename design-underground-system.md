@@ -2,11 +2,11 @@
 
 **Implement the class UndergroundSystem that supports three methods:**
 
-1. checkIn(int id, string stationName, int t)
+**1. checkIn(int id, string stationName, int t)**
 - A customer with id card equal to id, gets in the station stationName at time t.
 - A customer can only be checked into one place at a time.
 
-***2. checkOut(int id, string stationName, int t)***
+**2. checkOut(int id, string stationName, int t)**
 - A customer with id card equal to id, gets out from the station stationName at time t.
 
 ***3. getAverageTime(string startStation, string endStation)***
