@@ -1,4 +1,4 @@
-## Leetcode Problem #1396. Design Underground System
+## Leetcode Problem 1396. Design Underground System
 
 **Implement the class UndergroundSystem that supports three methods:**
 
