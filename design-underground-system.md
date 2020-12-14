@@ -9,7 +9,7 @@
 **2. checkOut(int id, string stationName, int t)**
 - A customer with id card equal to id, gets out from the station stationName at time t.
 
-***3. getAverageTime(string startStation, string endStation)***
+**3. getAverageTime(string startStation, string endStation)**
 - Returns the average time to travel between the startStation and the endStation.
 - The average time is computed from all the previous traveling from startStation to endStation that happened directly.
 - Call to getAverageTime is always valid.
