@@ -1,4 +1,4 @@
-# Leetcode Problem #66. Plus One
+# Leetcode Problem 66. Plus One
 
 **Given a non-empty array of digits representing a non-negative integer, increment one to the integer.**
 
