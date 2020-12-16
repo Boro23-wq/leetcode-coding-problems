@@ -25,7 +25,7 @@ Output: [4,3,2,2]
 `Explanation: The array represents the integer 4321.`
 ---
 
-## Solution (Time - O(n)  | Space - O(n))
+## Solution (Time Complexity - O(n)  | Space - O(n))
 
 ```java
 class Solution {
