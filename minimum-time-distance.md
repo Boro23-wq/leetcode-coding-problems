@@ -15,7 +15,7 @@ Output: 1
 
 ---
 
-## Solution Code (Time Complexity - O(N) | Space - O(1))
+## Solution Code (Time Complexity - O(N) | Space Complexity - O(1))
 
 ```java
 class Solution {
