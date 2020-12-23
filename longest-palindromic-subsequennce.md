@@ -23,7 +23,7 @@ Output: 2
 ***Constraints:***
 
 - 1 <= s.length <= 1000
-- s consists only of lowercase English letters.
+- s consists only lowercase English letters.
 
 ---
 
