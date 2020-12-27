@@ -29,7 +29,7 @@ Output: [-1,-1]
 
 ---
 
-## Solution (Time - O(logN) | Space - O(1))
+## Solution (Time Complexity - O(logN) | Space - O(1))
 
 ```java
 class Solution {
