@@ -43,7 +43,7 @@ Output: 0
 
 ---
 
-## Solution (Time - O(M^2 * N)  | Space - O(M * N))
+## Solution (Time Complexity - O(M^2 * N)  | Space - O(M * N))
 
 **M -> Size of our dequed word**
 **N -> Size of the word list**
