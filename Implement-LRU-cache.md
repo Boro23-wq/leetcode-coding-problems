@@ -1,4 +1,5 @@
-## Implemented an LRU Cache.
+## Implement an LRU Cache.
+
 ##### **Time** - O(1) -> Constant lookup time in hashmaps.  |---| **Space** - O(n) -> Linked List will hold 'n' items.
 
 ```javascript
