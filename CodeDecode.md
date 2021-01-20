@@ -2,7 +2,7 @@
 
 ---
 
-### Basic Naive Approach
+### Naive Approach
 
 
 ```javascript
