@@ -1,4 +1,4 @@
-# Leetcode Problem #412. Fizz Buzz
+# Leetcode Problem 412. Fizz Buzz
 
 **Write a program that outputs the string representation of numbers from 1 to n.**
 
