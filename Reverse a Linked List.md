@@ -1,4 +1,4 @@
-# Leetcode Problem #206: Reverse a singly linked list.
+# Leetcode Problem 206: Reverse a singly linked list.
 
 **Example:**
 
