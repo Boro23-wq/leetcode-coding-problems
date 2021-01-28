@@ -1,4 +1,4 @@
-# Leetcode Problem #394. Decode String
+# Leetcode Problem 394. Decode String
 
 **Given an encoded string, return its decoded string.**
 
