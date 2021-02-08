@@ -1,4 +1,4 @@
-## Leetcode Proplem 208. Implement Trie (Prefix Tree)
+## Leetcode Proplem 208. Implement Trie a.k.a. Prefix Tree
 
 **Implement a trie with insert, search, and startsWith methods.**
 
