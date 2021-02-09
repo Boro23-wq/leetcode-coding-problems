@@ -5,7 +5,7 @@
 - Only one letter can be changed at a time.
 - Each transformed word must exist in the word list.
 
-***Note:***
+**NOTE**
 
 - Return 0 if there is no such transformation sequence.
 - All words have the same length.
