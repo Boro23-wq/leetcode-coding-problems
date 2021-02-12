@@ -1,6 +1,6 @@
 # Leetcode Problem 539. Minimum Time Difference
 
-**Given a list of 24-hour clock time points in "Hour:Minutes" format, find the minimum minutes difference between any two time points in the list.**
+**Given a list of 24-hour clock time points in "Hr:Min" format, find the minimum minutes difference between any two time points in the list.**
 
 **Example 1:**
 
