@@ -1,4 +1,4 @@
-# Leetcode Problem #9: Palindrome Number
+# Leetcode Problem 9: Palindrome Number
 
 ## **Problem Statement:**
 
