@@ -1,4 +1,4 @@
-# Leetcode Problem #1414: Find the Minimum Number of Fibonacci Numbers Whose Sum Is K
+# Leetcode Problem 1414: Find the Minimum Number of Fibonacci Numbers Whose Sum Is K
 
 ## Problem Statement
 Given the number k, return the minimum number of Fibonacci numbers whose sum is equal to k, whether a Fibonacci number could be used multiple times.
