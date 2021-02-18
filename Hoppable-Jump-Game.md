@@ -1,4 +1,4 @@
-# Leetcode Problem #55: Jump Game
+# Leetcode Problem 55: Jump Game
 
 ## Problem statement:
 
