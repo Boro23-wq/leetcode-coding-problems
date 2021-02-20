@@ -1,4 +1,4 @@
-# Leetcode Question#146. LRU Cache
+# Leetcode Question 146. LRU Cache
 
 ## Problem Statement:
 
