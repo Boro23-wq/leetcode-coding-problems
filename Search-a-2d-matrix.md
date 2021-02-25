@@ -1,4 +1,4 @@
-# Leetcode Problem #74: Search a 2D Matrix
+# Leetcode Problem 74: Search a 2D Matrix
 
 ## Problem Statement:
 
