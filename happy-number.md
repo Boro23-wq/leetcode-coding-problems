@@ -1,4 +1,4 @@
-# Leetcode Problem #202. Happy Number
+# Leetcode Problem 202. Happy Number
 
 **Write an algorithm to determine if a number n is "happy".**
 
