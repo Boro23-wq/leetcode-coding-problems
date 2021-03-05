@@ -1,4 +1,4 @@
-# Leetcode Problem #349. Intersection of Two Arrays
+# Leetcode Problem 349. Intersection of Two Arrays
 
 **Given two arrays, write a function to compute their intersection.**
 
