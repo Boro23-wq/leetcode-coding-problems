@@ -1,4 +1,4 @@
-# Leetcode Problem #75: Sort Colors
+# Leetcode Problem 75: Sort Colors
 
 ## Problem Statement
 
