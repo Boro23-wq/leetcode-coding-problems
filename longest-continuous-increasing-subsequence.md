@@ -1,4 +1,4 @@
-# Leetcode Problem #674. Longest Continuous Increasing Subsequence
+# Leetcode Problem 674. Longest Continuous Increasing Subsequence
 
 **Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).**
 
