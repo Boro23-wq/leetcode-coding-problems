@@ -1,4 +1,4 @@
-# Leetcode Problem# 53: Maximum Subarray
+# Leetcode Problem 53: Maximum Subarray
 
 ## Problem Statement:
 
