@@ -1,4 +1,4 @@
-# Leetcode Problem #1189. Maximum Number of Balloons
+# Leetcode Problem 1189. Maximum Number of Balloons
 
 ## Problem Statement:
 
