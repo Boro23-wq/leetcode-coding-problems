@@ -1,4 +1,4 @@
-# Leetcode Problem #4. Median of Two Sorted Arrays
+# Leetcode Problem 4. Median of Two Sorted Arrays
 
 **Given two sorted arrays nums1 and nums2 of size m and n respectively.**
 
