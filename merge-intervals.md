@@ -1,4 +1,4 @@
-Leecode Problem #56. Merge Intervals
+Leecode Problem 56. Merge Intervals
 
 **Given a collection of intervals, merge all overlapping intervals.**
 
