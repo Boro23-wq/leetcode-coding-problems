@@ -1,4 +1,4 @@
-# Leetcode Problem #23. Merge k Sorted Lists
+# Leetcode Problem 23. Merge k Sorted Lists
 
 **Given an array of linked-lists lists, each linked list is sorted in ascending order.**
 
