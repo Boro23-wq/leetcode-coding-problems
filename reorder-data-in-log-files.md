@@ -1,4 +1,4 @@
-# Leetcode Problem #937. Reorder Data in Log Files
+# Leetcode Problem 937. Reorder Data in Log Files
 
 **You have an array of logs.  Each log is a space delimited string of words.**
 
