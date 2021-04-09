@@ -1,3 +1,3 @@
-# Leetcode
-## This is me trying to solve leetcode coding problems.
+# Algorithm Problems
+## This is me trying to solve get better at solving algorithmic problems.
 
