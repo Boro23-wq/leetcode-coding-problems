@@ -1,3 +1,3 @@
 # Algorithm Problems
-## This is me trying to solve get better at solving algorithmic problems.
+## This is me trying to get better at solving algorithmic problems.
 
