@@ -75,6 +75,7 @@ const bracketValidator = function(string) {
   return stack.length === 0;
 }
 
+// INPUT
 const string = "{[]()}"
 const anotherString = "{[(])}"
 const anotherAnotherString = "{[}";
