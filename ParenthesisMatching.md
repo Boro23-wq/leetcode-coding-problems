@@ -42,6 +42,8 @@ let totalOpenParenthesis = 0;
   return "No closing parentheticals found!"
 }
 
+// Input
+
 const sentence = "Sometimes (when I nest them (my parentheticals) too much (like this (and this))) they get confusing."
 
 const openingParenthesisIndex = 10;
