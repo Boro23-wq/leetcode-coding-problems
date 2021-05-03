@@ -60,4 +60,4 @@ We might guess that this "averages out" so that in a set of m enqueues and deque
 
 So let's look at the worst case for a single item, which is the case where it is enqueued and then later dequeued. In this case, the item enters inStack (costing 1 push), then later moves to outStack (costing 1 pop and 1 push), then later comes off outStack to get returned (costing 1 pop).
 
-Each of these 4 pushes and pops is O(1) time. So our total cost per item is O(1). Our m enqueue and dequeue operations put m or fewer items into the system, giving a total runtime of O(m).
+Each of these 4 pushes and pops is O(1) time. So our total cost per item is O(1). The total runtime is O(m).
